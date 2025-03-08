@@ -1,0 +1,427 @@
+/*tudo que se encontrar no documento lincado*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+/*Variaveis de cores*/
+:root{
+  --red:#fcf700;
+  --white:#ffffff;
+  --dark:#1e1c2a;
+  --head: #0e1c4b;
+}
+
+/*Tudo que estiver no body*/
+body{
+  color: var(--white);
+}
+
+/*Navegação do Menu*/
+.navigation{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  box-shadow: 0 0.1rem 0.5rem #080e2e;
+  width: 100%;
+  background: linear-gradient(#07182e, #041eacb7);
+  transition: all 0.5s;
+  position: fixed;
+}
+
+/*Logo do Site*/
+.logo{
+  color: var(--red);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/*Dentro da logo tem um elemento com o nome span*/
+.logo span{
+  color: var(--white);
+}
+
+/* Dentro da navegação do menu em ul*/
+.navigation ul{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Dentro da li do menu em link a*/
+.navigation ul li a{
+  color: var(--white);
+  font-size: 17px;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+/*Quando o mouse passar Dentro da li do menu em link a*/
+.navigation ul li a:hover{
+  color: var(--red);
+  color: #fbff00;
+  padding-bottom: 20px;
+  border-bottom: 1.3px solid #fbff00;
+}
+#nav-items{
+  display: block;
+  margin-top: 50px;
+  float: left;
+  color: #fff;
+  background: linear-gradient(#07182e, #0429fffb);
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+
+}
+#nav-items a{
+  color: #fff;
+}
+#nav-items:hover{
+  background: linear-gradient(#07182e, #041eacb7);
+}
+
+#nav-items{
+  display: none;
+}
+
+
+/*Menu Hamburguer*/
+.hamburguer{
+  cursor: pointer;
+  display: none;
+}
+
+/*Menu hamburguer com os span .bar*/
+.hamburguer .bar{
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--white);
+  margin: 5px auto;
+  transition: all 0.3s;
+}
+
+/*Nesta linha pegou o primeiro e o terceiro span .bar*/
+.hamburguer .bar:nth-child(1),
+.hamburguer .bar:nth-child(3){
+  background: #fbff00;
+}
+
+/*Slide que está por cima do background-img*/
+.slide{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10%;
+}
+.slide-text{
+  max-width: 37rem;
+}
+.slide-text .text-h4{
+  font-size: 1.5rem;
+  color: var(--red);
+  margin-bottom: 1rem;
+}
+.slide-text .text-h1{
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  line-height: 4rem;
+}
+.slide-text p{
+  margin-bottom: 4rem;
+}
+.slide-btn{
+  padding: 15px 45px;
+  background: linear-gradient(#07182e, #041dac);
+  color: var(--white);
+  border-radius: 10px;
+  font-weight: 700;
+  transition: all 0.5s;
+  box-shadow: 0 0.1rem 0.5rem #0d143a;
+}
+.slide-btn:hover{
+  background: linear-gradient(#3d3f11, #fbff00);
+  color: var(--head);
+}
+
+
+/*O main que está por baixo do slide onde está a imagem do background ou do fundo*/
+main{
+  background: center / cover no-repeat url(../imgs/backgs/backg01.jpg);
+  width: 100%;
+  height: 93vh;
+  box-shadow: 0 0.1rem 0.5rem #0d143a;
+}
+
+
+
+
+
+/*Responsividade do site*/
+@media (max-width:899px) {
+  .navigation{
+      padding: 18px 20px;
+  }
+  .hamburguer{
+      display: block;
+  }
+  .hamburguer.ativo .bar:nth-child(1){
+      transform:  translateY(8px) rotate(45deg);
+  }
+  .hamburguer.ativo .bar:nth-child(2) {
+      opacity: 0;
+  }
+  .hamburguer.ativo .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  .nav-menu{
+      position: fixed;
+      right: -100%;
+      top: 70px;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      background: var(--white);
+      color: #0e1c4b;
+      transition: 0.3s;
+      padding-top: auto;
+  }
+  .navigation ul li a{
+    color: var(--dark);
+  }
+
+  .navigation ul li a:hover{
+    color: var(--head);
+    opacity: 50%;
+  }
+  .nav-menu.ativo{
+      right: 0;
+  }
+  .nav-item{
+      margin: 16px 0;
+      color: #041dac;
+  }
+ 
+  .slide{
+      padding: 100px 1%;
+      flex-direction: column;
+      text-align: center;
+      overflow: hidden;
+      gap: 5rem;
+  }
+  .slide .text-h4{
+      font-size: 2rem;
+  }
+  .slide .text-h1{
+      font-size: 2.5rem;
+      line-height: 3rem;
+  }
+  .slide p{
+      font-size: 15px;
+  }
+  .slide-img{
+      padding-top: -5000px;
+      width: 35%;
+      height: 15vh;
+  }
+
+  .login-tela-content{
+    padding: 35px;
+    margin-top: -200px;
+  }
+
+
+  .login-tela-content p{
+    padding-bottom: 5px;
+}
+
+.login-tela-content a{
+  padding-bottom: 3px;
+}
+
+#logp{
+  margin-bottom: 12px;
+  padding: 15px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+#email{
+  background-color: transparent;
+  width: 100%;
+  border-radius: 5px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-width: none;
+  padding: 10px;
+  color: #ffd000;
+  border-bottom-color: #fbff00;
+}
+#passw{
+  color: #ffd000;
+  margin-top: 10px;
+  padding: 10px;
+}
+button{
+  padding: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+}
+
+
+
+
+.links-sociais #facebook1{
+  margin-top: 10px;
+  padding: 0px 4px 0px 4px;
+  width: 24px;
+  height: 24px;
+  margin-bottom: -10px;
+}
+.links-sociais #facebook2{
+  margin-top: 10px;
+  padding: 0px 4px 0px 4px;
+  width: 24px;
+  height: 24px;
+  margin-bottom: -10px;
+}
+.links-sociais #facebook3{
+  margin-top: 10px;
+  padding: 0px 4px 0px 4px;
+  width: 24px;
+  height: 24px;
+  margin-bottom: -10px;
+}
+.links-sociais #facebook4{
+  margin-top: 10px;
+  padding: 0px 4px 0px 4px;
+  width: 24px;
+  height: 24px;
+  margin-bottom: -10px;
+}
+.links-sociais #facebook5{
+  margin-top: 10px;
+  padding: 0px 4px 0px 4px;
+  width: 24px;
+  height: 24px;
+  margin-bottom: -10px;
+}
+
+}
+
+@media (max-width: 579px){
+  .login-tela-content{
+    display: none;
+}
+.slide{
+  padding: 250px 1%;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+  gap: 5rem;
+}
+#nav-items{
+  display: block;
+}
+
+}
+
+
+
+
+.scholl-menu ul{    
+  display: block;
+  margin: 10px;
+  transition: all 0.5s ease-in-out;
+}                     
+.scholl-menu ul li{   
+  width: 120px;
+  padding: 6px;
+}                    
+.scholl-menu ul li a{
+  font-size: 12px;
+  color: #000;
+}
+.scholl-menu{          
+  display: none;
+}                      
+
+ .nav-item:hover .scholl-menu{
+    display: block;
+    position: absolute;
+    left: 550px;
+    margin-top: 20px;
+    background-color: #fbff00;
+    box-shadow: 0 0.1rem 0.2rem #000;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.js ::before{
+  content: '';
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  height: 130%;
+  animation: alternate 4s linear infinite;
+  transition: all 0.3s linear;
+
+}
+.js ::after{
+  content: '';
+  position: absolute;
+  background-color: #07182E;
+  inset: 5px;
+  border-radius: 15px;
+}
+@keyframes animate {
+  from{
+    transform: rotate(0deg);
+  }
+  co {
+    transform: rotate(360deg);
+  }
+}

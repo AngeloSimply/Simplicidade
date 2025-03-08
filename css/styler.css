@@ -1,0 +1,173 @@
+
+a{
+
+
+    text-decoration: none;
+}
+
+.login-tela-content{
+    background-color: rgba(0, 0, 0, 0.466);
+    padding: 40px;
+    border-radius: 20px;
+    width: 120%;
+    margin-top: 100px;
+    box-shadow: 0 0.1rem 0.5rem #0d143a;
+}
+.login-tela-content p{
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.login-with{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+}
+.login-with:hover{
+    color: #fbff00;
+}
+.login-tela-content a{
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.login-tela-content a:hover{
+    text-align: center;
+    color: #fbff00;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+#logp{
+    text-align: center;
+    background-color: aliceblue;
+    margin-bottom: 25px;
+    padding: 15px;
+    margin-right: 10px;
+    border-radius: 10px;
+    color: #000000;
+    font-weight: bold;
+}
+#email{
+    background-color: transparent;
+    width: 100%;
+    border-radius: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-width: none;
+    padding: 20px;
+    color: #ffd000;
+    border-bottom-color: #fbff00;
+}
+#passw{
+    background-color: transparent;
+    width: 100%;
+    border-radius: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-width: none;
+    margin-top: 25px;
+    padding: 20px;
+    color: #ffd000;
+    border-bottom-color: #fbff00;
+}
+button{
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #fbff00;
+}
+button a{
+    width: 100%;
+    padding: 10px;
+    color: black;
+    font-weight: bold; 
+}
+
+.links-sociais{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+
+}
+.links-sociais a{
+    color: #fff;
+}
+
+.links-sociais #facebook1{
+    margin-top: 20px;
+    padding: 0px 8px 0px 8px;
+    width: 30px;
+    height: 30px;
+    margin-bottom: -20px;
+    transition: 0.5s ease-in-out;
+}
+.links-sociais #facebook2{
+    margin-top: 20px;
+    padding: 0px 8px 0px 8px;
+    width: 30px;
+    height: 30px;
+    margin-bottom: -20px;
+    transition: 0.5s ease-in-out;
+}
+.links-sociais #facebook3{
+    margin-top: 20px;
+    padding: 0px 8px 0px 8px;
+    width: 30px;
+    height: 30px;
+    margin-bottom: -20px;
+    transition: 0.5s ease-in-out;
+}
+.links-sociais #facebook4{
+    margin-top: 20px;
+    padding: 0px 8px 0px 8px;
+    width: 30px;
+    height: 30px;
+    margin-bottom: -20px;
+    transition: 0.5s ease-in-out;
+}
+.links-sociais #facebook5{
+    margin-top: 20px;
+    padding: 0px 8px 0px 8px;
+    width: 30px;
+    height: 30px;
+    margin-bottom: -20px;
+    transition: 0.5s ease-in-out;
+}
+
+.links-sociais #facebook1:hover{
+    color: #ffe600;
+}
+.links-sociais #facebook2:hover{
+    color: #ffe600;
+}
+.links-sociais #facebook3:hover{
+    color: #ffe600;
+}
+.links-sociais #facebook4:hover{
+    color: #ffe600;
+}
+.links-sociais #facebook5:hover{
+    color: #ffe600;
+}
+::placeholder{
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
